@@ -85,6 +85,8 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div id="footer-container">
 
     </div>
     <script>
@@ -98,6 +100,20 @@
 
                 })
                 .catch(error => console.error('Error loading header:', error));
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('copyright.html')
+                .then(response => response.text())
+                .then(data => {
+                    const styleContent = data.match(/<style[^>]*>([\s\S]*?)<\/style>/i)[1];
+                    const styleElement = document.createElement('style');
+                    styleElement.textContent = styleContent;
+                    document.head.appendChild(styleElement);
+                    const bodyContent = data.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
+                    document.getElementById('footer-container').innerHTML = bodyContent;
+
+                })
+                .catch(error => console.error('Error loading', error));
         });
     </script>
 </body>
