@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Danh sach cua hang</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(250, 250, 250);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .dChi {
+            width: 100%;
+            height: 100%;
+            /*border: 2px solid rgb(114, 182, 207);*/
+            background: #cedcef;
+            overflow: hidden;
+            /*white-space: nowrap; Giúp các dòng chữ không bị xuống dòng (tất cả sẽ nằm trên một hàng).*/
+        }
+
+        .chiNhanh {
+            padding: 25px 300px;
+            font-size: x-large;
+            color: #3b0b15e6;
+        }
+
+        .slideChu {
+            display: flex;
+            /*Làm cho các hộp chữ nằm thành 1 hàng ngang để làm slide*/
+            animation: chayChu 27s linear infinite;
+            /**/
+            width: 300%;
+        }
+
+        .dong {
+            text-align: center;
+            padding: 20px;
+            width: 25%;
+            border-right: 2px solid #851b0f;
+            text-align: left;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background: #f3f4f3;
+        }
+
+        .h3 {
+            padding-bottom: 12px;
+        }
+
+        .chuXem{
+            color: #a11e1e;
+            text-decoration: underline;
+            line-height: 45px;
+            cursor: pointer;
+        }
+
+        /*% trước là để can thời gian 0%=0s, muốn giữa hay di chuyển bao lâu thì phải căn chung với giây animation và số div*/
+        /*margin-left là lướt sang trái, % sau là dùng để điều chỉnh khoảng cách các div(căn theo tỉ lệ giây của animation và width)*/
+        @keyframes chayChu {
+            0% {
+                margin-left: 0%;
+            }
+
+            7.40% {
+                margin-left: 0%;
+            }
+
+            /* 2s dừng */
+            11.11% {
+                margin-left: -25%;
+            }
+
+            /* 1s trượt */
+
+            18.51% {
+                margin-left: -25%;
+            }
+
+            /* 2s dừng */
+            22.22% {
+                margin-left: -50%;
+            }
+
+            /* 1s trượt */
+
+            29.62% {
+                margin-left: -50%;
+            }
+
+            /* 2s dừng */
+            33.33% {
+                margin-left: -75%;
+            }
+
+            /* 1s trượt */
+
+            40.74% {
+                margin-left: -75%;
+            }
+
+            /* 2s dừng */
+            44.44% {
+                margin-left: -100%;
+            }
+
+            /* 1s trượt */
+
+            51.85% {
+                margin-left: -100%;
+            }
+
+            /* 2s dừng */
+            55.55% {
+                margin-left: -125%;
+            }
+
+            /* 1s trượt */
+
+            62.96% {
+                margin-left: -125%;
+            }
+
+            /* 2s dừng */
+            66.66% {
+                margin-left: -150%;
+            }
+
+            /* 1s trượt */
+
+            74.07% {
+                margin-left: -150%;
+            }
+
+            /* 2s dừng */
+            77.77% {
+                margin-left: -175%;
+            }
+
+            /* 1s trượt */
+
+            85.18% {
+                margin-left: -175%;
+            }
+
+            /* 2s dừng */
+            88.88% {
+                margin-left: -200%;
+            }
+
+            /* 1s trượt */
+
+            96.29% {
+                margin-left: -200%;
+            }
+
+            /* 2s dừng */
+            100% {
+                margin-left: 0%;
+            }
+
+            /* 1s trượt */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="dChi">
+            <div class="chiNhanh">
+                <h2>CÁC CHI NHÁNH ĐỊA LÝ</h2>
+            </div>
+
+            <div class="slideChu">
+                <div class="dong">
+                    <h3 class="h3">TH true mart Nguyễn Chí Thanh-Điện Biên Phủ</h3>
+                    265 Nguyễn Chí Thanh, Tỉnh Điện Biên<br>
+                    <b>Điện Biên Phủ</b><br>
+                    <b>Điện thoại: </b>02153720566<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Võ Nguyên Giáp-Điện Biên Phủ</h3>
+                    Số 579 Võ Nguyên Giáp, tổ 1, P. Tân Thanh, Tỉnh Điện Biên<br>
+                    <b>Điện Biên Phủ</b><br>
+                    <b>Điện thoại: </b>02153900039<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Hoàng Diệu-Đà Nẵng</h3>
+                    370 - 372 Hoàng Diệu, Q. Bình Thuận<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363537360<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Âu Cơ-Đà Nẵng</h3>
+                    72 Âu Cơ, Q. Liên Chiểu<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363551429<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+
+                    <h3 class="h3">TH true mart Nguyễn Văn Thoại-Đà Nẵng</h3>
+                    123 Nguyễn Văn Thoại, Q. Ngũ Hành Sơn<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363646300<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Hùng Vương-Đà Nẵng</h3>
+                    339 Hùng Vương, phường Vĩnh Trung, Q. Thanh Khê<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363572679<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Trần Cao Vân-Đà Nẵng</h3>
+                    442 Trần Cao Vân, Q. Thanh Khê<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363551428<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Điện Biên Phủ-Đà Nẵng</h3>
+                    425 Điện Biên Phủ, P. Hòa Khê, Q. Thanh Khê<br>
+                    <b>Đà Nẵng</b><br>
+                    <b>Điện thoại: </b>02363221038<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Nguyễn Văn Linh-Quảng Ngãi</h3>
+                    431 Nguyễn Văn Linh, P. Trương Quang Trọng<br>
+                    <b>Quảng Ngãi</b><br>
+                    <b>Điện thoại: </b>02553510765<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Đinh Đức Thiện-Thành phố Hồ Chí Minh</h3>
+                    D15/10 Ấp 4 Đinh Đức Thiện, Bình Chánh<br>
+                    <b>Thành phố Hồ Chí Minh</b><br>
+                    <b>Điện thoại: </b>02836207638<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Lê Hồng Phong-Cần Thơ</h3>
+                    16/9 Lê Hồng Phong, Bình Thủy<br>
+                    <b>Cần Thơ</b><br>
+                    <b>Điện thoại: </b>02923798825<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+
+                <div class="dong">
+                    <h3 class="h3">TH true mart Hai Bà Trưng-Lâm Đồng</h3>
+                    20 Hai Bà Trưng, Đà Lạt<br>
+                    <b>Lâm Đồng</b><br>
+                    <b>Điện thoại: </b>02633597909<br>
+                    <b class="chuXem">Xem trên bản đồ</b>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: 45px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.9155426922134!2d108.14639111635086!3d16.07050695102353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219a7c378a51f%3A0x738befdbbf2f8255!2sTH%20True%20Mart!5e0!3m2!1svi!2s!4v1742957441471!5m2!1svi!2s"
+                    width="80%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
