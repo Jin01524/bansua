@@ -1,3 +1,6 @@
+body {
+    background: linear-gradient(to bottom, #95d5ff, #ffffff);
+}
 .menu {
     background-color: #ffffff;
     position: relative;
